@@ -8,12 +8,18 @@ import { RoutingModule } from './routing/routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { InstructionsComponent } from './instructions/instructions.component';
+import { PeopleComponent } from './people/people.component';
+import { AddComponent } from './people/add/add.component';
+import {PeopleService} from './people/people.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    InstructionsComponent
+    InstructionsComponent,
+    PeopleComponent,
+    AddComponent
   ],
   imports: [
     RoutingModule,
@@ -21,7 +27,7 @@ import { InstructionsComponent } from './instructions/instructions.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
